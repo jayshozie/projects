@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+
+EMPTY_LINE=''
+
+echo $EMPTY_LINE
+echo 'Compiling...'
+echo $EMPTY_LINE
+
+# Define file paths for clarity and reuse
+SERVER_C=~/projects/socket-programming/server.c
+SERVER=~/projects/socket-programming/server
+CLIENT_C=~/projects/socket-programming/client.c
+CLIENT=~/projects/socket-programming/client
+
+# 1. Attempt to compile the C++ file
+# gcc outputs compilation errors to stderr, which the user will see in the terminal
+gcc -Wall -std=gnu99 "$SERVER_C" -o "$SERVER"
+
+# Store the exit status of the last command (g++)
+COMPILATION_STATUS=$?
+
+# 2. Check the exit status
+if [ $COMPILATION_STATUS -eq 0 ]; then
+    # SUCCESS: Exit status is 0
+    echo '[INFO] Compiled without errors.'
+    echo $EMPTY_LINE
+    echo 'Running...'
+    echo $EMPTY_LINE
+    
+    # Execute the compiled program
+    # "$OUTPUT_FILE"
+    
+    # Delete the executable after execution
+    # rm -f "$OUTPUT_FILE"
+else
+    # ERROR: Exit status is non-zero (g++ failed)
+    
+    # The requirement was to delete testBench.exe if an error occurred.
+    # gcc usually doesn't create the file on error, but we delete it just in case.
+    # rm -f "$OUTPUT_FILE"
+    
+    # Echo the required error message
+    echo $EMPTY_LINE
+    echo '[ERROR] Cannot compile, see above for the raised error.'
+fi
+
+# --- TMP BLOCK START ---
+gcc -Wall -std=c99 "$CLIENT_C" -o "$CLIENT"
+
+COMPILATION_STATUS=$?
+
+# 2. Check the exit status
+if [ $COMPILATION_STATUS -eq 0 ]; then
+    # SUCCESS: Exit status is 0
+    echo '[INFO] Compiled without errors.'
+    echo $EMPTY_LINE
+    echo 'Running...'
+    echo $EMPTY_LINE
+    
+    # Execute the compiled program
+    # "$OUTPUT_FILE"
+    
+    # Delete the executable after execution
+    # rm -f "$OUTPUT_FILE"
+else
+    # ERROR: Exit status is non-zero (g++ failed)
+    
+    # The requirement was to delete testBench.exe if an error occurred.
+    # gcc usually doesn't create the file on error, but we delete it just in case.
+    # rm -f "$OUTPUT_FILE"
+    
+    # Echo the required error message
+    echo $EMPTY_LINE
+    echo '[ERROR] Cannot compile, see above for the raised error.'
+fi
+# --- TMP BLOCK END ---
