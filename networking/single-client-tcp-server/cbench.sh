@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-CURR_DIR=$(pwd)
 SOURCE=""
 OUTPUT=""
-PATH_TO_SOURCE=$CURR_DIR/
-PATH_TO_OUTPUT=$CURR_DIR/
 GCC_FLAGS="-Wall -Wextra -std=gnu99"
 
 ################################################################################
@@ -16,19 +13,24 @@ help() {
     echo
     echo 'Syntax: cbench NAME_OF_SOURCE NAME_FOR_OUTPUT'
     echo 'Options:'
-    echo '-s=      Name of the source.'
-    echo '-o=      Name for the output.'
     echo '-std=    GCC Standards'
+    echo '-s       Name of the source.'
+    echo '-o       Name for the output.'
     echo '-v       Print version.'
     echo '-r       Run the output binary if GCC compiles successfully.'
     echo
 }
 
+################################################################################
+# Compile File                                                                 #
+################################################################################
 compile_file() {
-    local source=$1
-    local output=$2
+    local source_name=$1
+    local output_name=$2
+    local PATH_TO_SOURCE = $(pwd)/source_name
+    local PATH_TO_OUTPUT = $(pwd)/output_name
 
-    gcc $GCC_FLAGS "$source" -o "$output"
+    gcc $GCC_FLAGS "$PATH_TO_SOURCE" -o "$PATH_TO_OUTPUT"
 
     if [ $? -ne 0 ]; then
         echo "\e[1;31m[ERR]\[0m:  GCC FAILED TO COMPILE $source. SEE ABOVE!!!"
