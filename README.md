@@ -33,8 +33,6 @@ Clone via [stdio](https://en.wikipedia.org/wiki/C_file_input/output)
 
 Around half-way done.
 
-#### Progress 
-
 ##  Contribution
 
 Contributions are always welcome, don't hesitate to open a PR.
