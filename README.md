@@ -26,7 +26,8 @@ Around half-way done.
 
 #### [ `yacc` - Yet Another `cat` Clone](./c/yacc)
 
-[cat](https://www.gnu.org/software/coreutils/manual/coreutils.html#cat-invocation) Clone via [stdio](https://en.wikipedia.org/wiki/C_file_input/output)](./c/cat-clone-stdio)
+[cat](https://www.gnu.org/software/coreutils/manual/coreutils.html#cat-invocation)
+Clone via [stdio](https://en.wikipedia.org/wiki/C_file_input/output)
 
 
 #### Progress 
