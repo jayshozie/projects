@@ -1,3 +1,6 @@
 [submodule "c-mastery-projects"]
 	path = c-mastery-projects
 	url = https://github.com/jayshozie/c-mastery-projects.git
+[submodule "networking"]
+	path = networking
+	url = https://github.com/jayshozie/networking.git
