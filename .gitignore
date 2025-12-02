@@ -1,2 +1,13 @@
+# Executables
+*.o
+*.out
+*.exe
+
+# Utilities
 diff.txt
 log.txt
+stat.txt
+
+# Debug Artifacts
+*.d
+*.ilk
