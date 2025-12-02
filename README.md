@@ -1,38 +1,66 @@
-# Jayshozie's Projects
+# 🚀 Jayshozie's Systems Programming Portfolio
 
-This is my repo of small to considerable projects.
+This repository serves as a central collection and version control manager
+(using Git submodules) for my low-level systems programming curriculum.
 
-##  Projects
+### Why submodules?
 
-### [ Networking Projects](./networking)
+Each project (e.g., [yacc](./c-mastery-projects/yet-another-cat-clone)) is a
+completely separate repository, allowing for independent versioning, branching
+and clear history tracking.
 
-I'm using [Beej's Guide to Networking Programming](https://www.beej.us/guide/bgnet/html/split-wide/)
-and the book [Computer Networking: a Top-Down Approach (9th ed.)](https://gaia.cs.umass.edu/kurose_ross/)
-as resources.
+---
 
-#### [󰒋 Single Client TCP Server](./networking/single-client-tcp-server)
+## 🏗️ Project Containers
 
-##### Progress 
+| Icon | Module Name | Description | Key Focus |
+| :---: | :--- | :--- | :--- |
+| **🧠** | [**C-Systems-Fundamentals**](./c-mastery-projects) | Core C projects focusing on manual memory management, pointer arithmetic, and concurrency primitives (Mutexes, Queues). | C Mastery & Concurrency |
+| **🌐** | [**Networking**](./networking) | Low-level networking projects built with POSIX sockets, demonstrating different I/O and server architectures. | I/O Multiplexing & Sockets |
 
-Pretty much done. No bugs found, yet.
+---
 
-#### [󰒋 TCP Server w/ Multi-Client Support (Chatbox)](./networking/single-client-tcp-server)
+## 💻 Projects by Container
 
-##### Progress 
+### 🧠 C-Systems-Fundamentals
 
-Around half-way done.
+* **[`yacc` (Yet Another Cat Clone)](./c-mastery-projects/yacc):** A
+re-implementation of the GNU Coreutils utility `cat` to master the **Standard
+I/O** and **Syscall** interfaces (`read`/`write`) and I/O buffering techniques.
+Version v2.0 implements `cat` with `stdio`, with version v3.0 I'll implement the
+entire project using `syscalls`.
+(Current Version: v2.0)
 
-### [ C Projects](./c/)
+### 🌐 Networking
 
-#### [ `yacc` - Yet Another `cat` Clone](./c/yacc)
+* **[`Iterative-Blocking-TCP-Example`](./networking/iterative-blocking-tcp-example):**
+A simple server/client system demonstrating the **blocking I/O model**—where the
+server processes a single client at a time. At this point the server
+automatically shuts down after the connected client disconnects, but the server
+waiting again for another connection can be easily implemented in v2.0.
+(Current Version: v1.0)
+* **[`IOMUX-Chat-System-in-C`](./networking/iomux-chat-system-in-c):** A
+multi-client chat server using **I/O Multiplexing (`select` / `poll`)** to
+synchronously manage multiple connections within a single process. I'm still
+working on it, a stable version release doesn't exist yet.
+(Current Version: N/A)
+* **[`Socket Programming Utilities`](./networking/socket-programming):** A
+directory of small tests I've done with the subject. It doesn't include any
+necessary stuff, I just used this to understand the socket interface in C.
 
-[cat](https://www.gnu.org/software/coreutils/manual/coreutils.html#cat-invocation)
-Clone via [stdio](https://en.wikipedia.org/wiki/C_file_input/output)
+---
 
-##### Progress 
+## 📖 Curriculum and Resources
 
-Around half-way done.
+These projects are guided by the goal of kernel development and are supported by
+the following resources:
 
-##  Contribution
+* **System Calls:** *Advanced Programming in the UNIX Environment* (APUE) / *The
+Linux Programming Interface* (TLPI)
+* **Architecture:** *Computer Systems: A Programmer's Perspective* (CS:APP)
+* **Networking Theory:** *Computer Networking: a Top-Down Approach* (K&R)
 
-Contributions are always welcome, don't hesitate to open a PR.
+## 🤝 Contribution
+
+Contributions and feedback are always welcome. Please feel free to open an Issue
+or PR in the respective submodule's repository.
