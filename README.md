@@ -27,9 +27,16 @@ and clear history tracking.
 * **[`yacc` (Yet Another Cat Clone)](./c-mastery-projects/yacc):** A
 re-implementation of the GNU Coreutils utility `cat` to master the **Standard
 I/O** and **Syscall** interfaces (`read`/`write`) and I/O buffering techniques.
-Version v2.0 implements `cat` with `stdio`, with version v3.0 I'll implement the
+Version v2.0 implements `cat` with `stdio`, with version v3.0 I implemented the
 entire project using `syscalls`.
-(Current Version: v2.0)
+(Current Version: v3.0)
+
+* **[`jayshell`](./c-mastery-projects/jayshell):** A shell interpreter written
+in C as a study project. It uses `readline` for its initial shell loop, it can
+do basic command parsing with `strtok()`, it has support for external commands
+using `fork()` and `execvp()`, and lastly it has 2 basic built-in commands,
+`exit` and `cd` (without `~` support, yet).
+(Current Version: v1.0)
 
 ### 🌐 Networking
 
