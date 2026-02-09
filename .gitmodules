@@ -4,3 +4,6 @@
 [submodule "networking"]
 	path = networking
 	url = https://github.com/jayshozie/networking.git
+[submodule "osdev"]
+	path = osdev
+	url = https://github.com/jayshozie/osdev
