@@ -7,3 +7,6 @@
 [submodule "osdev"]
 	path = osdev
 	url = https://github.com/jayshozie/osdev
+[submodule "hardware-tools"]
+	path = hardware-tools
+	url = https://github.com/jayshozie/hardware-tools
